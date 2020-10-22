@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#390745"
+    tools:context=".StartPageActivity">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/startpage"
+            />
+        <EditText
+            android:id="@+id/id_passwd"
+            android:layout_width="216dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="100sp"
+            android:layout_marginTop="350dp"
+            android:hint="비밀번호를 입력하세요."
+            android:inputType="numberPassword"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <EditText
+            android:id="@+id/id_name"
+            android:layout_width="216dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="100sp"
+            android:layout_marginTop="300dp"
+            android:hint="E-mail을 입력하세요."
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="200sp"
+            android:layout_height="80sp"
+            android:layout_marginLeft="100sp"
+            android:layout_marginTop="450dp"
+            android:background="@drawable/confirm"
+            />
+
+    </FrameLayout>
+</LinearLayout>

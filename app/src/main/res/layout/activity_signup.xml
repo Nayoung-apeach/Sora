@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#390745"
+    tools:context=".StartPageActivity">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/join_bg"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="회원가입"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:id="@+id/idEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail을 입력하세요."
+            android:textColorHint="#ffffff"
+            android:layout_marginTop="200dp"
+            android:textColor="#ffffff"
+            android:inputType="textEmailAddress"
+            />
+        <EditText
+            android:id="@+id/passEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력하세요."
+            android:textColorHint="#ffffff"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            android:layout_marginTop="250dp"
+            />
+<!--        <EditText-->
+<!--            android:id="@+id/passCheckText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="비밀번호를 확인해주세요."-->
+<!--            android:textColorHint="#ffffff"-->
+<!--            android:inputType="numberPassword"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:layout_marginTop="300dp"-->
+<!--            />-->
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/confirm"
+            />
+    </FrameLayout>
+</LinearLayout>
