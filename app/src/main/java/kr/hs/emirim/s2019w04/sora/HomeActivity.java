@@ -6,10 +6,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
@@ -28,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.action_home:
                         setFrag(0);
                         break;
@@ -40,14 +43,14 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                 }
                 return true;
-
             }
         });
         frag1 = new Frag1();
         frag2 = new Frag2();
         frag3 = new Frag3();
-        setFrag(0); //첫 프래그먼트 화면을 무엇으로 지정해 줄 것인지
+        setFrag(0); //첫 프래그먼트 화면을 무엇으로 지정해 줄 것인지 설정
     }
+
     //프래그먼트 교체가 일어나는 실행문이다.
     private void setFrag(int n){
         fm = getSupportFragmentManager();
