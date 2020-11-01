@@ -60,6 +60,7 @@ public class SignupActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     startToast("회원가입에 성공하였습니다.");
+                                    startHomeActivity();
                                 } else {
                                     if(task.getException() != null){
                                         startToast(task.getException().toString());
@@ -75,10 +76,12 @@ public class SignupActivity extends AppCompatActivity {
         }else{
             startToast("이메일 또는 비밀번호를 입력해주세요.");
         }
-
-
     }
     private void startToast(String msg){
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
+    }
+    public void startHomeActivity() {
+        Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
     }
 }

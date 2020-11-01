@@ -7,6 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        />
+
     <FrameLayout
         android:id="@+id/main_frame"
         android:layout_width="match_parent"
@@ -20,8 +27,8 @@
         android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:itemIconTint="#000000"
-        app:itemTextColor="#000000"
+        app:itemIconTint="#ffffff"
+        app:itemTextColor="#ffffff"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_menu" />
 

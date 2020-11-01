@@ -78,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
 
         public void startHomeActivity() {
             Intent i = new Intent(this, HomeActivity.class);
+            getIntent().addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
         }
     }
