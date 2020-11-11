@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1번 화면입니다."
-        android:textSize="40sp"
-        />
+    android:background="@android:color/holo_purple">
 
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/startpage"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/textbox"
+            />
+        <TextView
+            android:id="@+id/answertext"
+            android:textSize="20dp"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="45dp"
+            android:inputType="textPersonName"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="350dp"
+            android:hint="무엇이든 물어보세요!"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toTopOf = "@+id/imageView3"
+            />
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="440dp"
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/check"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/img3"
+            />
+    </FrameLayout>
 </LinearLayout>

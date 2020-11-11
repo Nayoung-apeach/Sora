@@ -81,7 +81,7 @@ public class SignupActivity extends AppCompatActivity {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
     public void startHomeActivity() {
-        Intent i = new Intent(this, HomeActivity.class);
+        Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
     }
 }
