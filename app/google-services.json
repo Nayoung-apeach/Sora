@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "511461241696",
+    "firebase_url": "https://sora-5e2fd.firebaseio.com",
+    "project_id": "sora-5e2fd",
+    "storage_bucket": "sora-5e2fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511461241696:android:4508d3d0e09e9f9d396405",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.s2019w04.sora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511461241696-vkvtckvscij1mq6ssgu0n3o4d1tngrpf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.emirim.s2019w04.sora",
+            "certificate_hash": "fa85e280ea62f80e528af56e3c306625e3298723"
+          }
+        },
+        {
+          "client_id": "511461241696-dl68ksod71oiks05bmjf8ijqljki9sbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkOeHdlDvZDFkxEgNzD8IAj_G2X14NzQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511461241696-dl68ksod71oiks05bmjf8ijqljki9sbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

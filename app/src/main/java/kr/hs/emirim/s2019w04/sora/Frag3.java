@@ -1,5 +1,6 @@
 package kr.hs.emirim.s2019w04.sora;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,41 +10,39 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class Frag3 extends Fragment {
     private View view;
-    private Object Intent;
-    FirebaseAuth mAuth;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.frag3, container, false);
         view = inflater.inflate(R.layout.frag3, container, false);
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startSignUpActivity();
+        }
+        view.findViewById(R.id.btn_logout).setOnClickListener(onClickListener);
 
-        getActivity().findViewById(R.id.logout_btn).setOnClickListener(onClickListener);
         return view;
     }
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch (v.getId()){
-                case R.id.login_btn:
+                case R.id.btn_logout:
                     FirebaseAuth.getInstance().signOut();
-                    StartPageActivity();
+                    startSignUpActivity();
                     break;
-            }
-            if(FirebaseAuth.getInstance().getCurrentUser() == null){
-                StartPageActivity();
             }
         }
     };
-
-    private void StartPageActivity(){
-        Intent intent = new Intent (getActivity(), StartPageActivity.class);
+    private void startSignUpActivity(){
+        Intent intent = new Intent(getActivity(), StartPageActivity.class);
         startActivity(intent);
     }
 }

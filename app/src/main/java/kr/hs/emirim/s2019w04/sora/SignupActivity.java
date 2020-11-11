@@ -36,6 +36,12 @@ public class SignupActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        System.exit(1);
+    }
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -80,6 +86,7 @@ public class SignupActivity extends AppCompatActivity {
     private void startToast(String msg){
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
+
     public void startHomeActivity() {
         Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
