@@ -17,7 +17,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String TAG = "LoginActivity";
     private FirebaseAuth mAuth;
 
     @Override
@@ -28,13 +27,6 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.login_btn).setOnClickListener(onClickListener);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
 //    @Override
@@ -48,13 +40,13 @@ public class LoginActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.login_btn:
-                    signUp();
+                    login();
                     break;
             }
         }
     };
 
-    private void signUp() {
+    private void login() {
         String email = ((EditText) findViewById(R.id.id_name)).getText().toString();
         String password = ((EditText) findViewById(R.id.id_passwd)).getText().toString();
 
