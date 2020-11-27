@@ -13,9 +13,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".StartPageActivity"/>
         <activity android:name=".SignupActivity" />
-        <activity android:name=".MemberInitActivity" >
+        <activity android:name=".StartPageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,3 +23,5 @@
         </activity>
     </application>
 </manifest>
+
+

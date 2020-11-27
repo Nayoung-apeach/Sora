@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -23,7 +21,6 @@ public class Frag1 extends Fragment {
     private View view;
     private EditText Questions;
     private TextView answerText;
-    private String question;
     Button button_check;
     Random randomanswer = new Random();
 
@@ -51,9 +48,6 @@ public class Frag1 extends Fragment {
         btn_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(question.length() == 0){
-                    
-                }
                 answerText.setText("답 : " + answer1[answer]); // + answer1[]);
             }
         });
