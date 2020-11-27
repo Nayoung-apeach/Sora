@@ -10,7 +10,7 @@
         android:id="@+id/action_cal"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="달력"
+        android:title="질문"
         />
     <item
         android:id="@+id/action_set"
