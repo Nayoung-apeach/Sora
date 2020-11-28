@@ -14,7 +14,6 @@ import androidx.fragment.app.FragmentManager;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserInfo;
 
 public class Frag3 extends Fragment {
     private View view;
@@ -31,14 +30,8 @@ public class Frag3 extends Fragment {
         if (user == null) {
             myStartActivity(SignupActivity.class);
         }else{
-            for (UserInfo profile: user.getProviderData()){
-                String name = profile.getDisplayName();
-                if(name == null){
-                    myStartActivity(MemberinitActivity.class);
-                }
-            }
+            myStartActivity(MemberinitActivity.class);
         }
-
         view.findViewById(R.id.btn_logout).setOnClickListener(onClickListener);
         return view;
     }
