@@ -2,7 +2,6 @@ package kr.hs.emirim.s2019w04.sora;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,13 +28,16 @@ public class Frag3 extends Fragment {
         view = inflater.inflate(R.layout.frag3, container, false);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-//        if (user == null) {
-//            startSignUpActivity();
-//        }else{
-//            for (User info profile: user.getProviderData()){
-//                String name = profile.getDisplayName();
-//            }
-//        }
+        if (user == null) {
+            myStartActivity(SignupActivity.class);
+        }else{
+            for (UserInfo profile: user.getProviderData()){
+                String name = profile.getDisplayName();
+                if(name == null){
+                    myStartActivity(MemberinitActivity.class);
+                }
+            }
+        }
 
         view.findViewById(R.id.btn_logout).setOnClickListener(onClickListener);
         return view;
@@ -47,13 +49,14 @@ public class Frag3 extends Fragment {
             switch (v.getId()){
                 case R.id.btn_logout:
                     FirebaseAuth.getInstance().signOut();
-                    startSignUpActivity();
+                    myStartActivity(SignupActivity.class);
                     break;
             }
         }
     };
-    private void startSignUpActivity(){
-        Intent intent = new Intent(getActivity(), StartPageActivity.class);
+    private void myStartActivity(Class c){
+        Intent intent = new Intent(getActivity(), c);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 }

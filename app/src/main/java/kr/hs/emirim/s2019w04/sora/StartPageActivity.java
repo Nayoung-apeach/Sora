@@ -1,11 +1,11 @@
 package kr.hs.emirim.s2019w04.sora;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class StartPageActivity extends AppCompatActivity {
     Button loginBtn;

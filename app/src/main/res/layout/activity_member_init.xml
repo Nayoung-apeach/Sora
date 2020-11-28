@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#390745"
+    tools:context=".StartPageActivity">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/join_bg"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="회원정보"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름을 입력하세요."
+            android:textColorHint="#ffffff"
+            android:layout_marginTop="200dp"
+            android:textColor="#ffffff"
+            android:inputType="textPersonName"
+            />
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="전화번로를 입력하세요."
+            android:textColorHint="#ffffff"
+            android:inputType="phone"
+            android:textColor="#ffffff"
+            android:layout_marginTop="250dp"
+            />
+        <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="생일을 입력해주세요."
+            android:textColorHint="#ffffff"
+            android:inputType="date"
+            android:textColor="#ffffff"
+            android:layout_marginTop="300dp"
+            />
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="주소를 입력해주세요."
+            android:textColorHint="#ffffff"
+            android:inputType="textPostalAddress"
+            android:textColor="#ffffff"
+            android:layout_marginTop="350dp"
+            />
+        <Button
+            android:id="@+id/checkButton"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="500dp"
+            android:background="@drawable/confirm"
+            />
+    </FrameLayout>
+</LinearLayout>
