@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageView1" type="id" />
+    <item name="imageView2" type="id" />
+    <item name="Questions" type="id" />
+    <item name="Questionsbtn" type="id" />
+</resources>

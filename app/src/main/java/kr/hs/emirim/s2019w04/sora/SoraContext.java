@@ -28,4 +28,5 @@ public class SoraContext {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
 }

@@ -39,5 +39,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth:20.0.0'
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:24.0.0'
 }
 apply plugin: 'com.google.gms.google-services'

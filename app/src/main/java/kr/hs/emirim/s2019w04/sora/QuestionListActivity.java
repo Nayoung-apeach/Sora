@@ -2,13 +2,11 @@ package kr.hs.emirim.s2019w04.sora;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class Frag2 extends Fragment implements ContextviewListener{
+public class QuestionListActivity extends AppCompatActivity implements ContextviewListener{
 
     private ArrayList<SoraContext> contextsItem = null;
     private ContextAdapter contextAdapter = null;
@@ -29,29 +27,13 @@ public class Frag2 extends Fragment implements ContextviewListener{
     DatabaseReference databaseReference = firebaseDatabase.getReference();
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frag2, container, false);
+        setContentView(R.layout.frag2);
 
         init();
+        initView();
         addChildEvent();
-
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.question_list_view);
-        contextAdapter = new ContextAdapter(contextsItem, getContext(), this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(contextAdapter);
-
-        return view;
-    }
-
-    private void init(){
-        contextsItem = new ArrayList<>();
     }
 
     private void addChildEvent(){
@@ -87,6 +69,18 @@ public class Frag2 extends Fragment implements ContextviewListener{
 
             }
         });
+    }
+
+    private void init(){
+        contextsItem = new ArrayList<>();
+    }
+
+    private  void initView(){
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.question_list_view);
+        contextAdapter= new ContextAdapter(contextsItem,this,this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(contextAdapter);
     }
 
     @Override
