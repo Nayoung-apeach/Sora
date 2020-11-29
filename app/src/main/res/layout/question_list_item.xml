@@ -17,6 +17,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:fontFamily="@font/imcresoojin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="answer text"
+        android:fontFamily="@font/imcresoojin"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="#FFF6A7"

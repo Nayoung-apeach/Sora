@@ -23,6 +23,7 @@
         <TextView
             android:id="@+id/answertext"
             android:textSize="20dp"
+            android:fontFamily="@font/imcresoojin"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:textColor="#ffffff"
@@ -37,12 +38,14 @@
             android:layout_marginTop="350dp"
             android:hint="무엇이든 물어보세요!"
             android:textColorHint="#ffffff"
+            android:fontFamily="@font/imcresoojin"
             android:textColor="#ffffff"
             android:inputType="textPersonName"
             app:layout_constraintTop_toTopOf = "@+id/imageView3"
             />
         <Button
             android:id="@+id/btn_check"
+            android:fontFamily="@font/imcresoojin"
             android:layout_width="250dp"
             android:layout_height="80dp"
             android:layout_marginTop="440dp"
@@ -51,6 +54,7 @@
             />
         <ImageView
             android:layout_width="match_parent"
+            android:fontFamily="@font/imcresoojin"
             android:layout_height="70dp"
             android:layout_marginTop="270dp"
             android:background="@drawable/img3"

@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="질문입니당"
         android:textSize="35dp"
+        android:fontFamily="@font/imcresoojin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

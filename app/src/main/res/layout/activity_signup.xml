@@ -24,6 +24,7 @@
             android:layout_height="200dp"
             android:gravity="center"
             android:text="회원가입"
+            android:fontFamily="@font/imcresoojin"
             android:textColor="#ffffff"
             android:textSize="24dp"
             android:textStyle="bold"
@@ -33,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="E-mail을 입력하세요."
+            android:fontFamily="@font/imcresoojin"
             android:textColorHint="#ffffff"
             android:layout_marginTop="200dp"
             android:textColor="#ffffff"
@@ -43,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호를 입력하세요."
+            android:fontFamily="@font/imcresoojin"
             android:textColorHint="#ffffff"
             android:inputType="textPassword"
             android:textColor="#ffffff"
@@ -53,11 +56,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호를 확인해주세요."
+            android:fontFamily="@font/imcresoojin"
             android:textColorHint="#ffffff"
             android:inputType="textPassword"
             android:textColor="#ffffff"
             android:layout_marginTop="300dp"
             />
+
         <Button
             android:id="@+id/signUpButton"
             android:layout_width="200dp"
@@ -65,6 +70,6 @@
             android:layout_marginLeft="80dp"
             android:layout_marginTop="400dp"
             android:background="@drawable/confirm"
-            />
+            android:fontFamily="@font/imcresoojin" />
     </FrameLayout>
 </LinearLayout>

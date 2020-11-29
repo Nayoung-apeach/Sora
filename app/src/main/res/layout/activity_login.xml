@@ -21,6 +21,7 @@
 
         <EditText
             android:id="@+id/id_name"
+            android:fontFamily="@font/imcresoojin"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:layout_marginLeft="30dp"
@@ -31,6 +32,7 @@
 
         <EditText
             android:id="@+id/id_passwd"
+            android:fontFamily="@font/imcresoojin"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:layout_marginLeft="30dp"
@@ -43,6 +45,7 @@
 
         <Button
             android:id="@+id/login_btn"
+            android:fontFamily="@font/imcresoojin"
             android:layout_width="180sp"
             android:layout_height="80sp"
             android:layout_marginLeft="80dp"
