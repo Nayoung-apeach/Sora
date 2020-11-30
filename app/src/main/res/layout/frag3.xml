@@ -22,16 +22,6 @@
             android:src="@drawable/nayoung"
             />
         <TextView
-            android:id="@+id/text_name"
-            android:fontFamily="@font/imcresoojin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:layout_marginTop="200dp"
-            android:layout_marginLeft="30dp"
-            android:text="이름 : "
-            />
-        <TextView
             android:id="@+id/text_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

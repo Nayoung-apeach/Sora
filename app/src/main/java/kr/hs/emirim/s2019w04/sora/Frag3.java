@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,23 +21,26 @@ public class Frag3 extends Fragment {
     private FragmentManager fm;
     private FragmentTransaction ft;
     private boolean profile;
+    private TextView text_email;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag3, container, false);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-        if (user == null) {
-            myStartActivity(SignupActivity.class);
-        }else{
-            myStartActivity(MemberinitActivity.class);
-        }
         view.findViewById(R.id.btn_logout).setOnClickListener(onClickListener);
+        text_email = view.findViewById(R.id.text_email);
+
+        String user_email = user.getEmail();
+        text_email.setText(user_email);
+
         return view;
     }
 
+
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
+
         @Override
         public void onClick(View v) {
             switch (v.getId()){
